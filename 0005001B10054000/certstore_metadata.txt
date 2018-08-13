@@ -1,0 +1,105 @@
+##################################################
+# See README for the format information.
+#
+# NOTE: This file is used to generate 'production'
+# version of certificate store title. For 'development'
+# version 'certstore_metadata_dev.txt' is used. 
+##################################################
+
+##################################################
+##################################################
+# Client certificates and private keys
+# X509 cert in DER format and Private (RSA) key in PKCS1 format.
+##################################################
+##################################################
+#################################################
+# NINTENDO CLIENT CERTS
+#################################################
+id = 1;  type = 2;  encoding = 1; properties = 0x1; capability_mask = 0x0000000000001000; paths = ccerts/WIIU_COMMON_1_CERT.der,ccerts/WIIU_COMMON_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1191
+id = 3;  type = 2;  encoding = 1; properties = 0x3; capability_mask = 0x0000000000000800; paths = ccerts/WIIU_ACCOUNT_1_CERT.der,ccerts/WIIU_ACCOUNT_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1190
+id = 4;  type = 2;  encoding = 1; properties = 0x3; capability_mask = 0x0000000000000400; paths = ccerts/WIIU_OLIVE_1_CERT.der,ccerts/WIIU_OLIVE_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1192
+id = 5;  type = 2;  encoding = 1; properties = 0x3; capability_mask = 0x0000000000000200; paths = ccerts/WIIU_VINO_1_CERT.der,ccerts/WIIU_VINO_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1191
+id = 6;  type = 2;  encoding = 1; properties = 0x3; capability_mask = 0x0000000000000100; paths = ccerts/WIIU_WOOD_1_CERT.der,ccerts/WIIU_WOOD_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1192
+id = 7;  type = 2;  encoding = 1; properties = 0x1; capability_mask = 0x0; paths = ccerts/WIIU_OLIVE_1_CERT.der,ccerts/WIIU_OLIVE_1_RSA_KEY.aes; pid= -4; groups= 0; KEYSIZEDER= 1192
+# ID=8 is for using Wood client certificate but not export it
+id = 8;  type = 2;  encoding = 1; properties = 0x1; capability_mask = 0x0000000000004000; paths = ccerts/WIIU_WOOD_1_CERT.der,ccerts/WIIU_WOOD_1_RSA_KEY.aes; pid= 0; groups= 0; KEYSIZEDER= 1192
+
+#################################################
+#################################################
+# CA sertificates (X509 cert in DER format)
+#################################################
+#################################################
+
+
+#################################################
+# NINTENDO CA CERTS (GROUP: CERTSTORE_ENTITY_GROUP_NINTENDO_CA_CERTS)
+#################################################
+id = 100;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CA.der; pid= -4; groups= 1;
+id = 101;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CA_G2.der; pid= -4; groups= 1;
+id = 103;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CLASS2_CA.der; pid= -4; groups= 1;
+id = 104;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CLASS2_CA_G2.der; pid= -4; groups= 1;
+id = 105;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CLASS2_CA_G3.der; pid= -4; groups= 1;
+# NOTE: 102 is keep last instead of 105 to avoid bug#5286 (if 105 is loaded last as part of NSSLAddServerPKIGroups then it don't seem to get added.)
+id = 102;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CACERT_NINTENDO_CA_G3.der; pid= -4; groups= 1;
+
+#################################################
+# COMMERCIAL CA CERTS (GROUP: CERTSTORE_ENTITY_GROUP_COMMERCIAL_CA_CERTS)
+#################################################
+id = 1001;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/BALTIMORE_CYBERTRUST_ROOT_CA.der; pid= -4; groups= 2;
+id = 1002;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/CYBERTRUST_GLOBAL_ROOT_CA.der; pid= -4; groups= 2;
+id = 1003;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERIZON_GLOBAL_ROOT_CA.der; pid= -4; groups= 2;
+id = 1004;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GLOBALSIGN_ROOT_CA.der; pid= -4; groups= 2;
+id = 1005;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GLOBALSIGN_ROOT_CA_R2.der; pid= -4; groups= 2;
+id = 1006;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GLOBALSIGN_ROOT_CA_R3.der; pid= -4; groups= 2;
+id = 1007;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERISIGN_CLASS3_PUBLIC_PRIMARY_CA_G3.der; pid= -4; groups= 2;
+id = 1008;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERISIGN_UNIVERSAL_ROOT_CA.der; pid= -4; groups= 2;
+id = 1009;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERISIGN_CLASS3_PUBLIC_PRIMARY_CA_G5.der; pid= -4; groups= 2;
+id = 1010;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/THAWTE_PRIMARY_ROOT_CA_G3.der; pid= -4; groups= 2;
+id = 1011;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/THAWTE_PRIMARY_ROOT_CA.der; pid= -4; groups= 2;
+id = 1012;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GEOTRUST_GLOBAL_CA.der; pid= -4; groups= 2;
+id = 1013;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GEOTRUST_GLOBAL_CA2.der; pid= -4; groups= 2;
+id = 1014;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GEOTRUST_PRIMARY_CA.der; pid= -4; groups= 2;
+id = 1015;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GEOTRUST_PRIMARY_CA_G3.der; pid= -4; groups= 2;
+id = 1016;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/ADDTRUST_EXT_CA_ROOT.der; pid= -4; groups= 2;
+id = 1017;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/COMODO_CA.der; pid= -4; groups= 2;
+id = 1018;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/UTN_DATACORP_SGC_CA.der; pid= -4; groups= 2;
+id = 1019;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/UTN_USERFIRST_HARDWARE_CA.der; pid= -4; groups= 2;
+id = 1020;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/DIGICERT_HIGH_ASSURANCE_EV_ROOT_CA.der; pid= -4; groups= 2;
+id = 1021;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/DIGICERT_ASSURED_ID_ROOT_CA.der; pid= -4; groups= 2;
+id = 1022;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/DIGICERT_GLOBAL_ROOT_CA.der; pid= -4; groups= 2;
+id = 1023;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/GTE_CYBERTRUST_GLOBAL_ROOT.der; pid= -4; groups= 2;
+id = 1024;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERISIGN_CLASS3_PUBLIC_PRIMARY_CA.der; pid= -4; groups= 2;
+id = 1025;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/THAWTE_PREMIUM_SERVER_CA.der; pid= -4; groups= 2;
+id = 1026;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/EQUIFAX_SECURE_CA.der; pid= -4; groups= 2;
+id = 1027;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/ENTRUST_SECURE_SERVER_CA.der; pid= -4; groups= 2;
+id = 1028;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/VERISIGN_CLASS3_PUBLIC_PRIMARY_CA_G2.der; pid= -4; groups= 2;
+id = 1029;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/ENTRUST_CA_2048.der; pid= -4; groups= 2;
+id = 1030;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/ENTRUST_ROOT_CA.der; pid= -4; groups= 2;
+id = 1031;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/ENTRUST_ROOT_CA_G2.der; pid= -4; groups= 2;
+id = 1032;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/DIGICERT_ASSURED_ID_ROOT_CA_G2.der; pid= -4; groups= 2;
+id = 1033;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/DIGICERT_GLOBAL_ROOT_CA_G2.der; pid= -4; groups= 2;
+
+#################################################
+# 4096 bit COMMERCIAL CA CERTS (GROUP: NONE)
+#################################################
+id = 1900;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/COMODO_RSA_CA.der; pid= -4; groups= 0;
+id = 1901;  type = 1;  encoding = 1; properties = 0x2; capability_mask = 0x0; paths = scerts/USERTRUST_RSA_CA.der; pid= -4; groups= 0;
+
+########################################################################
+# Device AUthentication
+########################################################################
+id = 5001;  type = 7;  encoding = 3; properties = 0x2; capability_mask = 0x0; paths = devauth/dev/wiiu_prod_devauth_common_certchain.pem; pid= -4; groups= 0;
+id = 5002;  type = 6;  encoding = 3; properties = 0x2; capability_mask = 0x0; paths = devauth/dev/wiiu_prod_devauth_common_cert.pem; pid= -4; groups= 0;
+
+########################################################################
+# Symmetric Encryption/Decryption Keys 
+########################################################################
+#Properties - 0x4 means the file is encrypted
+id = 6001;  type = 3;  encoding = 2; properties = 0x4; capability_mask = 0x0000000000002000; paths = ccerts/WIIU_WAGONU_CRYPTO_SYMKEY.aes; pid= 0; groups= 0; RAW_SIZE = 16 
+
+########################################################################
+# HMAC Keys 
+########################################################################
+#Properties - 0x4 means the file is encrypted
+id = 7001;  type = 3;  encoding = 2; properties = 0x4; capability_mask = 0x0000000000002000; paths = ccerts/WIIU_WAGONU_HMAC_KEY.aes; pid= 0; groups= 0; RAW_SIZE = 32;
+
